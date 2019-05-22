@@ -425,16 +425,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     update_engine \
-    update_verifier
-
-# Enable update engine sideloading by including the static version of the
-# boot_control HAL and its dependencies.
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.msm8996 \
-    libgptutils \
-    libz \
-    libcutils
-PRODUCT_PACKAGES += \
+    update_verifier \
     update_engine_sideload
 
 # Tell the system to enable copying odexes from other partition.
@@ -512,6 +503,7 @@ PRODUCT_PACKAGES += \
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl:64 \
+    android.hardware.boot@1.0-impl.recovery:64 \
     android.hardware.boot@1.0-service
 
 # Library used for VTS tests  (only for userdebug and eng builds)
@@ -532,7 +524,9 @@ PRODUCT_COPY_FILES += \
 
 # Bootloader HAL used for A/B updates.
 PRODUCT_PACKAGES += \
-    bootctrl.msm8996
+    bootctrl.msm8996 \
+    bootctrl.msm8996.recovery
+
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
