@@ -136,6 +136,8 @@ PRODUCT_PROPERTY_OVERRIDES += aaudio.mmap_exclusive_policy=2
 PRODUCT_PROPERTY_OVERRIDES += aaudio.hw_burst_min_usec=2000
 
 PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+# Memtrack HAL
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.bluetooth.audio@2.0-impl \
@@ -334,7 +336,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.gyro.android=4 \
     persist.camera.tof.direct=1 \
     persist.camera.tnr.preview=1 \
-    persist.camera.tnr.video=1
+    persist.camera.tnr.video=1 \
+    persist.camera.perflock.enable=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.feature=1 \
