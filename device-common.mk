@@ -62,7 +62,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=256m \
     ro.telephony.default_cdma_sub=0
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+# Setup Dalvik VM configurations
+$(call inherit-product, vendor/pixeldust/configs/phone-xhdpi-4096-dalvik-heap.mk)
+
 $(call inherit-product, device/google/marlin/common/common64.mk)
 
 #Android EGL implementation
