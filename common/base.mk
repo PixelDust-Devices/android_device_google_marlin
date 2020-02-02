@@ -648,14 +648,12 @@ PRODUCT_PACKAGES := \
     CellBroadcastReceiver \
     CertInstaller \
     DrmProvider \
-    Email \
     Gallery2 \
     LatinIME \
     Mms \
     Music \
     Phone \
     Provision \
-    QuickSearchBox \
     Settings \
     Sync \
     SystemUI \
