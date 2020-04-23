@@ -30,6 +30,12 @@ PRODUCT_RESTRICT_VENDOR_FILES := true
 
 PRODUCT_COPY_FILES += device/google/marlin/fstab.common:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.marlin
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=marlin \
+    PRIVATE_BUILD_DESC="marlin-user 8.1.0 OPM1.171019.021 4565141 release-keys"
+
+BUILD_FINGERPRINT := google/marlin/marlin:8.1.0/OPM1.171019.021/4565141:user/release-key
+
 $(call inherit-product, device/google/marlin/device-marlin.mk)
 $(call inherit-product-if-exists, vendor/google_devices/marlin/device-vendor-marlin.mk)
 
