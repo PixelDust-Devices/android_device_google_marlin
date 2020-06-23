@@ -257,6 +257,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# Enable SAP+SAP feature
+QC_WIFI_HIDL_FEATURE_DUAL_AP := true
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
