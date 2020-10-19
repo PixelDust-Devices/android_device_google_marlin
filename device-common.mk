@@ -677,3 +677,7 @@ PRODUCT_PACKAGES += \
     performanced \
     virtual_touchpad \
     vr_hwc
+
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
