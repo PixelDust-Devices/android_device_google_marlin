@@ -696,3 +696,7 @@ PRODUCT_COPY_FILES += \
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
+
+# Write flags to the vendor space in /misc partition.
+PRODUCT_PACKAGES += \
+    misc_writer
