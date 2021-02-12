@@ -21,25 +21,22 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
 # Inherit device specific makefiles
-$(call inherit-product, device/google/marlin/device-marlin.mk)
-$(call inherit-product, vendor/google/marlin/marlin-vendor.mk)
+$(call inherit-product, device/google/marlin/device-sailfish.mk)
+$(call inherit-product, vendor/google/sailfish/sailfish-vendor.mk)
 
-PRODUCT_NAME := lineage_marlin
-PRODUCT_DEVICE := marlin
+PRODUCT_NAME := aosp_sailfish
+PRODUCT_DEVICE := sailfish
 PRODUCT_BRAND := google
-PRODUCT_MODEL := Pixel XL
+PRODUCT_MODEL := Pixel
 PRODUCT_MANUFACTURER := Google
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # GMS client ID
 PRODUCT_GMS_CLIENTID_BASE := android-google
 
-
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=marlin \
-    PRIVATE_BUILD_DESC="marlin-user 10 QP1A.210205.007.A3 5972272 release-keys"
+    PRODUCT_NAME=sailfish \
+    PRIVATE_BUILD_DESC="sailfish-user 10 QP1A.210205.007.A3 5972272 release-keys"
 
-BUILD_FINGERPRINT := google/marlin/marlin:10/QP1A.210205.007.A3/5972272:user/release-keys
+BUILD_FINGERPRINT := google/sailfish/sailfish:10/QP1A.210205.007.A3/5972272:user/release-keys
