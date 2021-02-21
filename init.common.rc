@@ -875,23 +875,23 @@ on property:sys.vdso=32
    write /sys/module/vdso/parameters/enable_64 0
 
 # Write the dark theme magic to /misc partition.
-service vendor.theme_set /vendor/bin/misc_writer --set-dark-theme
+service vendor.theme_set /vendor/bin/misc_writer --override-vendor-space-offset 10814 --set-dark-theme
     disabled
     oneshot
 
 # Clear the dark theme magic in /misc partition.
-service vendor.theme_clear /vendor/bin/misc_writer --clear-dark-theme
+service vendor.theme_clear /vendor/bin/misc_writer --override-vendor-space-offset 10814 --clear-dark-theme
     disabled
     oneshot
 
-# Set the dark boot flag on dark mode (UiModeManager.MODE_NIGHT_YES == 2).
+# Set dark boot flag on dark mode (UiModeManager.MODE_NIGHT_YES == 2).
 on property:persist.sys.theme=2
-    start vendor.darkboot
+    start vendor.theme_set
 
-# Clear the dark theme flag on light mode (UiModeManager.MODE_NIGHT_NO == 1) or auto mode
+# Clear the dark boot flag on light mode (UiModeManager.MODE_NIGHT_NO == 1) or auto mode
 # (UiModeManager.MODE_NIGHT_AUTO == 0).
 on property:persist.sys.theme=1
-    start vendor.darkboot_clear
+    start vendor.theme_clear
 
 on property:persist.sys.theme=0
-    start vendor.darkboot_clear
+    start vendor.theme_clear
