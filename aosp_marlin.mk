@@ -23,12 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 PRODUCT_NAME := aosp_marlin
 PRODUCT_DEVICE := marlin
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on msm8996
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Pixel XL
 PRODUCT_MANUFACTURER := Google
-PRODUCT_RESTRICT_VENDOR_FILES := true
-
-PRODUCT_COPY_FILES += device/google/marlin/fstab.common:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.marlin
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=marlin \
@@ -38,8 +35,4 @@ BUILD_FINGERPRINT := google/marlin/marlin:8.1.0/OPM1.171019.021/4565141:user/rel
 
 $(call inherit-product, device/google/marlin/device-marlin.mk)
 $(call inherit-product-if-exists, vendor/google_devices/marlin/device-vendor-marlin.mk)
-
-PRODUCT_PACKAGES += \
-    Launcher3QuickStep \
-    WallpaperPicker
 
