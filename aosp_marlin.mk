@@ -36,3 +36,4 @@ BUILD_FINGERPRINT := google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/rel
 $(call inherit-product, device/google/marlin/device-marlin.mk)
 $(call inherit-product-if-exists, vendor/google/marlin/marlin-vendor.mk)
 
+TARGET_SYSTEM_PROP := device/google/marlin/marlin/marlin.prop
