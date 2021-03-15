@@ -20,8 +20,9 @@
 
 PRODUCT_SHIPPING_API_LEVEL := 25
 
-# Setting vendor SPL
-VENDOR_SECURITY_PATCH := "2019-10-05"
+# Last stock security patch levels
+PLATFORM_SECURITY_PATCH := 2019-12-05
+VENDOR_SECURITY_PATCH := "2019-12-05"
 
 PRODUCT_SOONG_NAMESPACES += \
     device/google/marlin \
