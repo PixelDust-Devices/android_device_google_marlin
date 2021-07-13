@@ -36,4 +36,3 @@ BUILD_FINGERPRINT := google/sailfish/sailfish:10/QP1A.191005.007.A3/5972272:user
 $(call inherit-product, device/google/marlin/device-sailfish.mk)
 $(call inherit-product-if-exists, vendor/google/marlin/marlin-vendor.mk)
 
-TARGET_SYSTEM_PROP := device/google/marlin/sailfish/sailfish.prop
